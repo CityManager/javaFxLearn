@@ -1,5 +1,6 @@
 package ind.xwm.learn.javafx.platform;
 
+
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.scene.Scene;
@@ -15,7 +16,6 @@ import javafx.stage.Stage;
  * Platform.runLater 被非JavaFX Application Thread 调用，便于向JavaFX Application Thread 的队列推送UI更新指令
  * Platform.setImplicitExit(false); 作用是 关闭所有窗口后，程序仍保持运行状态
  * 使用场景： 将程序最小化为任务栏小图标？
- *
  */
 public class UsePlatForm extends Application {
     private static final String SUBMIT = "确认";
@@ -23,7 +23,7 @@ public class UsePlatForm extends Application {
     private static boolean isSubmit = false;
 
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage primaryStage) {
         Button btn = new Button(SUBMIT);
         btn.setOnAction((event -> {
             isSubmit = !isSubmit;
