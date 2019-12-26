@@ -22,7 +22,7 @@
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
-            <version>11</version>
+            <version>11.0.2</version>
         </dependency>
 
     </dependencies>
@@ -115,7 +115,7 @@
                         </goals>
                         <configuration>
                             <!-- 因为 PATH 中的 jar 是 Java8，所以这里指定的绝对路径 -->
-                            <executable>/data/app/jdk-11.0.2/bin/jar</executable>
+                            <executable>D:\program\graalvm-ce-java11-19.3.0.2\bin\jar</executable>
                             <arguments>
                                 <argument>
                                     --update
@@ -124,7 +124,7 @@
                                 </argument>
                                 <!-- 启动类 -->
                                 <argument>
-                                    --main-class=org.example.App
+                                    --main-class=ind.xwm.learn.javafx.L1HelloWorld
                                 </argument>
                                 <argument>
                                     --module-version=${project.version}
@@ -136,11 +136,11 @@
             </plugin>
 
             <plugin>
-                <groupId>org.openjfx</groupId>
+                <groupId>com.zenjava</groupId>
                 <artifactId>javafx-maven-plugin</artifactId>
-                <version>0.0.2</version>
+                <version>8.8.3</version>
                 <configuration>
-                    <mainClass>App</mainClass>
+                    <mainClass>ind.xwm.learn.javafx.L1HelloWorld</mainClass>
                 </configuration>
             </plugin>
         </plugins>
